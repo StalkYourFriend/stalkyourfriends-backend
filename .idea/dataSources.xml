@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails stalkmyfriends-backend: production" uuid="e4d81c8f-0dc5-41a2-abe0-eebe6bb0cbb3">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:stalkmyfriends-backend_production</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails stalkmyfriends-backend: test" uuid="98cb2b8c-6e04-454a-b8d2-23b257cbb54e">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:stalkmyfriends-backend_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails stalkmyfriends-backend: development" uuid="181f35a4-71c9-48bd-9f8d-c72fabfe5a78">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:stalkmyfriends-backend_development</jdbc-url>
+    </data-source>
+  </component>
+</project>
