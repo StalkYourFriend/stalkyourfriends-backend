@@ -1,19 +1,19 @@
-# README
+# StalkYourFriends-Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Ruby on Rails 5.1 JSON API only backend server for StalkYourFriends Android client
 
-Things you may want to cover:
-
-* Ruby version
+* Ruby version: 
+`2.3.3`
 
 * System dependencies
 
 * Configuration
 
 * Database creation
+`rails db:setup`
 
 * Database initialization
+`rails db:migrate`
 
 * How to run the test suite
 
