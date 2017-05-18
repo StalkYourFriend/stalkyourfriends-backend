@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :users
 
   get 'users/:id/friends', to: 'users#friends'
+  post 'users/:id/addfriend', to: 'users#add_friend'
+  post 'users/:id/addfriendbyname', to: 'users#add_friends_by_name'
 end
