@@ -16,10 +16,26 @@ class ApplicationController < ActionController::API
     head 409 and return
   end
 
-  def validate_user
+  def validate_login
     token = request.headers["X-Api-Key"]
-    head 403 and return unless token
+    return unless token
     user = User.find_by token: token
-    head 403 and return unless user
+    return unless user
+    if 15.minutes.ago < user.updated_at
+      user.touch
+      @current_user = user
+    end
+  end
+
+  def validate_user
+    head 403 and return unless @current_user
+  end
+
+  def default_meta
+    {
+        licence: 'CC-0',
+        authors: ['Saša'],
+        logged_in: (@current_user ? true : false)
+    }
   end
 end

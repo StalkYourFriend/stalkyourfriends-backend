@@ -12,9 +12,17 @@ class UsersController < ApplicationController
     render json: @user
   end
 
-
   def create
+    data = ActiveModelSerializers::Deserialization.jsonapi_parse(params)
+    Rails.logger.error params.to_yaml
+    user = User.where(full_name: data[:full_name]).first
+    if user
+      user.errors.add(data[:full_name], 'Username already exist, try a new one')
+      render_error(user, 403) and return
+    end
+
     user = User.new(user_params)
+
     if user.save
       render json: user, status: :created
     else
