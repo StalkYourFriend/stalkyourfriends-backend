@@ -62,4 +62,4 @@ bower.json
 .powenv
 
 .idea
-/config/database.yml
+#/config/database.yml
