@@ -79,7 +79,7 @@ class UsersController < ApplicationController
   #add friends for a user
   def add_friends_by_name
     begin
-      friend_name=params['data']['attributes']['full_name'].to_s
+      friend_name=params['data']['attributes']['full-name'].to_s
       friend=User.find_by_full_name(friend_name)
       if @user.friends.to_a.find_index(friend.id.to_s).nil?
         @user.friends << friend.id
